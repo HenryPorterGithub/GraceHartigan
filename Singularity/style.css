@@ -1,0 +1,306 @@
+.paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+}
+
+.verticalHR {
+    border-left: 1px solid white;
+    height: 100px;
+    width: 1px;
+    position: relative;
+    left: 201px;
+    top: 7px;
+}
+
+.cd-scroll-down {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: url("../singularity/img/cd-arrow-bottom.svg") no-repeat center center;
+    background-color: white;
+    filter: invert(100%);
+}
+
+.cd-img-replace {
+    /* replace text with a background-image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+/* mysterious issue with roboto font not longer getting applied */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    width: 100%;
+    height: 100%;
+}
+
+/* SECTION 1 */
+
+/* section IDs are like this are necessary for communicating with the nav */
+#section1 {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#section1 img {
+    width: 1000px;
+    height: auto;
+}
+
+.header {
+    font-family: 'Space Mono', monospace;
+    font-style: italic;
+    font-size: 70;
+    padding-top: 6%;
+}
+
+/* SECTION 2 */
+
+#section2 {
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/page01.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section2 .teal-content:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#section2 .teal-content .teal-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#section2 .teal-content .teal-text {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    border-left: 8px solid aquamarine;
+    height: 600px;
+    width: 470px;
+    margin-left: 1%;
+}
+
+#section2 .teal-content p {
+    font-weight: lighter;
+    text-align-last: left;
+    text-align: justify;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    font-size: 1.1em;
+}
+
+#section2 .teal-content img {
+    width: 350px;
+    align-self: center;
+}
+
+/* SECTION 3 */
+
+#section3 {
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/page02.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#section3 .sapphire-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#section3 .sapphire-content .sapphire-text {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    border-left: 8px solid dodgerblue;
+    height: 600px;
+    width: 470px;
+    margin-left: 1%;
+}
+
+#section3 .sapphire-text p {
+    font-weight: lighter;
+    text-align-last: left;
+    text-align: justify;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    font-size: 1.1em;
+}
+
+#section3 .sapphire-text img {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-self: right;
+}
+
+#section3 .sapphire-content .sapphire-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+#section3 .sapphire-images img {
+    width: 350px;
+    align-self: center;
+}
+
+/* you may possibly burn in hell for this */
+/* SECTION 5 */
+
+#section5 {
+
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/page03.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section5 .pink-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#section5 .pink-header h1 {
+    
+}
+
+#section5 .pink-header img {
+    margin: 8% 6% 0 0;
+
+}
+
+#section5 .pink-content .pink-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+#section5 .pink-images img {
+    align-self: center;
+
+}
+
+#section5 .pink-content .pink-text {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(134, 91, 91, 0.4), rgba(134, 91, 91, 1));
+    border-right: 8px solid hotpink;
+    height: 250px;
+    width: 1300px;
+    margin-left: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section5 .pink-content p {
+    font-weight: lighter;
+    text-align-last: left;
+    text-align: justify;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    width: 300px;
+}
+
+/* SECTION 4 */
+
+#section4 {
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/page04.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#section4 .light-content {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    border-left: 8px solid white;
+    height: 450px;
+    width: 470px;
+    margin-left: 11%;
+}
+
+#section4 .light-content p {
+    font-weight: lighter;
+    text-align-last: left;
+    text-align: justify;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+}
+
+#banner {
+    width: 100%;
+    height: 300px;
+}
+
+#banner img {
+    width: 100%;
+    height: 300px;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#banner img:hover {
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
+}
+
+#footer {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(black, #222222);
+}
+
+/* You arent commenting your code! */

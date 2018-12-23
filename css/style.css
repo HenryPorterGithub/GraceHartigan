@@ -1,0 +1,176 @@
+body {
+    font-size: 100%;
+    font-family: "Ubuntu", sans-serif;
+    color: #3e3947;
+    background-color: white;
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    color: #3e3947;
+    text-decoration: none;
+}
+
+.cd-section {
+    min-height: 100%;
+    position: relative;
+    padding: 2em 0;
+}
+
+/* alternating color scheme applied to section */
+.cd-section:nth-of-type(odd) {
+    background-color: #3e3947;
+}
+
+.cd-section:nth-of-type(odd) p {
+    color: #898099;
+}
+
+.cd-section:nth-of-type(even) {
+    background-color: #745360;
+}
+
+.cd-section:nth-of-type(even) p {
+    color: #bda3ad;
+}
+
+/* center content */
+.cd-section h1,
+.cd-section p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 768px;
+    text-align: center;
+}
+
+.cd-section h1 {
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+/* vertical nav */
+
+#cd-vertical-nav {
+    position: fixed;
+    left: 0px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#cd-vertical-nav li {
+    text-align: left;
+    position: relative;
+
+}
+
+#vl {
+    background-color: red;
+    position: relative;
+    left: 5px;
+}
+
+#cd-vertical-nav a {
+    display: inline-block;
+    /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.no-touch #cd-vertical-nav a:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#cd-vertical-nav a span {
+    float: right;
+    display: inline-block;
+}
+
+#vl {
+    width: 2px;
+    height: 50px;
+    background-color: #d88683;
+}
+
+/* hover label and dot */
+#cd-vertical-nav a:hover .cd-label {
+    opacity: 1;
+}
+
+#cd-vertical-nav a:hover .cd-dot {
+    background-color: white;
+}
+
+/* selected label and dot */
+#cd-vertical-nav a.is-selected .cd-label {
+    opacity: 1;
+}
+
+#cd-vertical-nav a.is-selected .cd-dot {
+    background-color: white;
+}
+
+/* label and dot */
+#cd-vertical-nav .cd-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color: white;
+    font-size: 14px;
+    font-size: 0.875rem;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+#cd-vertical-nav .cd-dot {
+    position: relative;
+    /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #d88683;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.wrapper {
+}
+@media only screen and (min-width: 768px) {
+    .cd-section h1 {
+        font-size: 30px;
+        font-size: 1.875rem;
+    }
+}
