@@ -1,3 +1,5 @@
+/* universal */
+
 body {
     font-size: 100%;
     font-family: "Ubuntu", sans-serif;
@@ -19,6 +21,14 @@ ul {
 a {
     color: #3e3947;
     text-decoration: none;
+}
+
+/* sections */
+
+#section1 {
+    background-image: url(img/grace1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .cd-section {
@@ -71,7 +81,6 @@ a {
 }
 
 /* vertical nav */
-
 #cd-vertical-nav {
     position: fixed;
     left: 0px;
@@ -166,8 +175,8 @@ a {
     transition: background-color 0.5s;
 }
 
-.wrapper {
-}
+.wrapper {}
+
 @media only screen and (min-width: 768px) {
     .cd-section h1 {
         font-size: 30px;
