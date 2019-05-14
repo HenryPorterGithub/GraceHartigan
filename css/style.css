@@ -1,6 +1,6 @@
 body {
     font-size: 100%;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Old Standard TT', serif;
     color: #3e3947;
     background-color: white;
     margin: 0;
@@ -44,23 +44,129 @@ a {
     color: #bda3ad;
 }
 
-/* center content */
-.cd-section h1,
-.cd-section p {
+/* intro */
+
+#G,
+#H,
+#V,
+#L {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    width: 90%;
-    max-width: 768px;
-    text-align: center;
+    font-size: 20vh;
+    top: 20vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
+
+#Grace,
+#Hartigan,
+#Visual,
+#Library {
+    position: absolute;
+    font-size: 5vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: appear;
+    opacity:0; 
+}
+
+/* animation assignment */
+
+#G,
+#V {
+    animation-name: moveUp;
+}
+
+#H,
+#L {
+    animation-name: moveDown;
+}
+
+/* animation definition */
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* positioning */
+
+#G {
+    animation-delay: 1s;
+    left: 15vw;
+}
+#Grace {
+    animation-delay: 2.5s;
+    left: 21vw;
+    top: 19vh;
+}
+
+#H {
+    animation-delay: 1s;
+    left: 35vw;
+}
+#Hartigan {
+    animation-delay: 3s;
+    left: 41.5vw;
+    top: 69vh;
+}
+
+#slogan {
+    top: 78vh;
+    left: 35.5vw;
+    font-size: 2vh;
+    position: absolute;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: appear;
+    opacity:0;
+}
+
+#V {
+    animation-delay: 2s;
+    left: 55vw;
+}
+#Visual {
+    animation-delay: 3.5s;
+    left: 61.5vw;
+    top: 12vh;
+}
+
+#L {
+    animation-delay: 2s;
+    left: 75vw;
+}#Library {
+    animation-delay: 4s;
+    left: 81vw;
+    top: 70.5vh;
+}
+
+/* center content */
 
 .cd-section h1 {
     color: white;
@@ -88,7 +194,6 @@ a {
 #cd-vertical-nav li {
     text-align: left;
     position: relative;
-
 }
 
 #vl {
@@ -166,8 +271,8 @@ a {
     transition: background-color 0.5s;
 }
 
-.wrapper {
-}
+.wrapper {}
+
 @media only screen and (min-width: 768px) {
     .cd-section h1 {
         font-size: 30px;
