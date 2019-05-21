@@ -24,20 +24,17 @@ a {
 .cd-section {
     min-height: 100%;
     position: relative;
-    padding: 2em 0;
+    background-color: #745360;
 }
 
-/* alternating color scheme applied to section */
-.cd-section:nth-of-type(odd) {
+#section1 {
     background-color: #3e3947;
 }
 
+/* alternating color scheme applied to section */
+
 .cd-section:nth-of-type(odd) p {
     color: #898099;
-}
-
-.cd-section:nth-of-type(even) {
-    background-color: #745360;
 }
 
 .cd-section:nth-of-type(even) p {
@@ -66,7 +63,7 @@ a {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: appear;
-    opacity:0; 
+    opacity: 0;
 }
 
 /* animation assignment */
@@ -119,6 +116,7 @@ a {
     animation-delay: 1s;
     left: 15vw;
 }
+
 #Grace {
     animation-delay: 2.5s;
     left: 21vw;
@@ -129,6 +127,7 @@ a {
     animation-delay: 1s;
     left: 35vw;
 }
+
 #Hartigan {
     animation-delay: 3s;
     left: 41.5vw;
@@ -144,13 +143,14 @@ a {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-name: appear;
-    opacity:0;
+    opacity: 0;
 }
 
 #V {
     animation-delay: 2s;
     left: 55vw;
 }
+
 #Visual {
     animation-delay: 3.5s;
     left: 61.5vw;
@@ -160,21 +160,32 @@ a {
 #L {
     animation-delay: 2s;
     left: 75vw;
-}#Library {
+}
+
+#Library {
     animation-delay: 4s;
     left: 81vw;
     top: 70.5vh;
 }
 
-/* center content */
-
-.cd-section h1 {
+.intro {
     color: white;
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 20px;
-    font-size: 1.25rem;
 }
+
+/* section titles */
+
+.sectionTitle {
+    font-size: 20em;
+    position: fixed;
+    top: -4vh;
+    left: 10vw;
+    z-index: 1000;
+    opacity: 0;
+    text-align: center;
+}
+
 
 /* vertical nav */
 
@@ -196,12 +207,6 @@ a {
     position: relative;
 }
 
-#vl {
-    background-color: red;
-    position: relative;
-    left: 5px;
-}
-
 #cd-vertical-nav a {
     display: inline-block;
     /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
@@ -209,21 +214,9 @@ a {
     backface-visibility: hidden;
 }
 
-.no-touch #cd-vertical-nav a:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 #cd-vertical-nav a span {
     float: right;
     display: inline-block;
-}
-
-#vl {
-    width: 2px;
-    height: 50px;
-    background-color: #d88683;
 }
 
 /* hover label and dot */
@@ -247,10 +240,10 @@ a {
 /* label and dot */
 #cd-vertical-nav .cd-label {
     position: relative;
-    margin-right: 10px;
-    padding: .4em .5em;
+    padding-left: 0.5vw;
+    
     color: white;
-    font-size: 14px;
+    font-size: 5em;
     font-size: 0.875rem;
     -webkit-transition: opacity 0.5s;
     -moz-transition: opacity 0.5s;
@@ -262,8 +255,8 @@ a {
     position: relative;
     /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
     top: 8px;
-    height: 12px;
-    width: 12px;
+    height: 0.5vw;
+    width: 0.5vw;
     border-radius: 50%;
     background-color: #d88683;
     -webkit-transition: background-color 0.5s;
@@ -271,7 +264,38 @@ a {
     transition: background-color 0.5s;
 }
 
-.wrapper {}
+
+.left {
+    width: 49vw;
+    height: 100vh;
+    float: left;
+
+}
+.right {
+    width: 49vw;
+    height: 100vh;
+    float: right;
+
+}
+
+.paintings {
+  -webkit-transform: scale(0.7); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.7); /* FF3.5+ */
+      -ms-transform: scale(0.7); /* IE9 */
+       -o-transform: scale(0.7); /* Opera 10.5+ */
+          transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.imgCL {
+    float: right;
+}
+
+.imgCR {
+    float: left;
+}
+
+
 
 @media only screen and (min-width: 768px) {
     .cd-section h1 {

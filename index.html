@@ -5,107 +5,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-
 
     <title>The Plane Story</title>
 
 </head>
 
-<body>
+<body onscroll="titleLoaders()">
+
     <nav id="cd-vertical-nav">
         <ul>
             <li>
                 <a href="#section1" data-number="1">
                     <span class="cd-label">Intro</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
-            <div id="vl"></div>
             <li>
                 <a href="#section2" data-number="2">
-                    <span class="cd-label">About</span>
+                    <span class="cd-label">Gender</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
-            <div id="vl"></div>
             <li>
                 <a href="#section3" data-number="3">
-                    <span class="cd-label">The Crash</span>
+                    <span class="cd-label">Brides</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
-            <div id="vl"></div>
             <li>
                 <a href="#section4" data-number="4">
-                    <span class="cd-label">The Hijacker</span>
+                    <span class="cd-label">Oranges</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
-            <div id="vl"></div>
             <li>
                 <a href="#section5" data-number="5">
-                    <span class="cd-label">The Pilots</span>
+                    <span class="cd-label">Culture</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
-            <div id="vl"></div>
             <li>
                 <a href="#section6" data-number="6">
-                    <span class="cd-label">The Passengers</span>
+                    <span class="cd-label">Abstract</span>
                     <span class="cd-dot"></span>
-                    
+
                 </a>
             </li>
         </ul>
     </nav>
 
+
     <section id="section1" class="cd-section">
-<<<<<<< HEAD
-        <h1 id="G">x</h1>
-=======
-        <h1 id="G">G</h1>
->>>>>>> 7b31ba0b212d3660c894d8b1c0ef6051e0a6fd31
-        <h1 id="Grace">race</h1>
+
+        <h1 id="G" class="intro">G</h1>
+        <h1 id="Grace" class="intro">race</h1>
         <p id="slogan">Peacock Studios <br> Design & Innovation</p>
-        <h1 id="H">H</h1>
-        <h1 id="Hartigan">artigan</h1>
-        <h1 id="V">V</h1>
-        <h1 id="Visual">isual</h1>
-        <h1 id="L">L</h1>
-        <h1 id="Library">ibrary</h1>
-        
-    </section><!-- cd-section -->
+        <h1 id="H" class="intro">H</h1>
+        <h1 id="Hartigan" class="intro">artigan</h1>
+        <h1 id="V" class="intro">V</h1>
+        <h1 id="Visual" class="intro">isual</h1>
+        <h1 id="L" class="intro">L</h1>
+        <h1 id="Library" class="intro">ibrary</h1>
 
+        <p id="section2Title" class="sectionTitle">Gender</p>
+        <p id="section3Title" class="sectionTitle">Brides</p>
+        <p id="section4Title" class="sectionTitle">Oranges</p>
+        <p id="section5Title" class="sectionTitle">Culture</p>
+        <p id="section6Title" class="sectionTitle">Abstract</p>
+
+
+    </section>
+
+    <!-- gender -->
     <section id="section2" class="cd-section">
-        <h1>About</h1>
-    </section><!-- cd-section -->
+        <div class="left">
+            <div class="imgCL">
+                <img class="paintings" id="genderPic1" src="img/Gender/gender1.jpg" />
+            </div>
+            <div class="imgCL">
+                <img class="paintings" id="genderPic2" src="img/Gender/gender2.png" />
+            </div>
+        </div>
 
+        <div class="right">
+            <div class="imgCR">
+                <img class="paintings" id="genderPic3" src="img/Gender/gender3.png" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Brides -->
     <section id="section3" class="cd-section">
-        <h1>The Crash</h1>
-    </section><!-- cd-section -->
+        <div class="left">
+            <div class="imgCL">
+                <img class="paintings" id="bridePic1" src="img/Brides/bride1ghvl.jpg" />
+            </div>
+            <div class="imgCL">
+                <img class="paintings" id="bridePic2" src="img/Brides/bride2ghvl.jpg" />
+            </div>
+        </div>
 
+        <div class="right">
+            <div class="imgCR">
+                <img class="paintings" id="bridePic3" src="img/Brides/bride3ghvl.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Oranges -->
     <section id="section4" class="cd-section">
-        <h1>The Hijacker</h1>
-    </section><!-- cd-section -->
 
+        <div class="left">
+            <div class="imgCL">
+                <img class="paintings" id="orangePic2" src="img/Orange/neworange.jpg" />
+
+            </div>
+            <div class="imgCL">
+                <img class="paintings" id="orangePic1" src="img/Orange/orange1ghvl.png" />
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="imgCR">
+                <img class="paintings" id="orangePic3" src="img/Orange/orange3ghvl.png" />
+            </div>
+            <div class="imgCR">
+                <img class="paintings" id="orangePic3" src="img/Orange/neworange2.jpg" />
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Culture -->
     <section id="section5" class="cd-section">
-        <h1>The Pilots</h1>
-    </section><!-- cd-section -->
+
+        <div class="left">
+            <div class="imgCL">
+                <img class="paintings" id="orangePic1" src="img/PopularCulture/cul1.jpg" />
+            </div>
+        </div>
+        <div class="right">
+            <div class="imgCR">
+                <img class="paintings" id="orangePic3" src="img/PopularCulture/cul2.jpg" />
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Abstract -->
 
     <section id="section6" class="cd-section">
-        <h1>The Passengers</h1>
-    </section><!-- cd-section -->
+        <div class="left">
+            <div class="imgCL">
+                <img class="paintings" id="orangePic1" src="img/Abstract/abs2.jpg" />
+            </div>
+        </div>
+        <div class="right">
+            <div class="imgCR">
+                <img class="paintings" id="orangePic3" src="img/Abstract/abs4.jpg" />
+            </div>
+        </div>
+    </section>
 
     <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <script src="js/main.js"></script>
 
 </body>
 
