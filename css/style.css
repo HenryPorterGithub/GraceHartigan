@@ -1,5 +1,4 @@
 body {
-    font-size: 100%;
     font-family: 'Old Standard TT', serif;
     color: #3e3947;
     background-color: white;
@@ -22,7 +21,7 @@ a {
 }
 
 .cd-section {
-    min-height: 100%;
+    min-height: 100vh;
     position: relative;
     background-color: #745360;
 }
@@ -165,7 +164,7 @@ a {
 #Library {
     animation-delay: 4s;
     left: 81vw;
-    top: 70.5vh;
+    top: 70vh;
 }
 
 .intro {
@@ -177,15 +176,14 @@ a {
 /* section titles */
 
 .sectionTitle {
-    font-size: 20em;
+    font-size: 20vw;
     position: fixed;
-    top: -4vh;
+    top: -15vh;
     left: 10vw;
     z-index: 1000;
     opacity: 0;
     text-align: center;
 }
-
 
 /* vertical nav */
 
@@ -241,7 +239,7 @@ a {
 #cd-vertical-nav .cd-label {
     position: relative;
     padding-left: 0.5vw;
-    
+
     color: white;
     font-size: 5em;
     font-size: 0.875rem;
@@ -264,6 +262,7 @@ a {
     transition: background-color 0.5s;
 }
 
+/* images */
 
 .left {
     width: 49vw;
@@ -271,35 +270,223 @@ a {
     float: left;
 
 }
+
 .right {
     width: 49vw;
     height: 100vh;
     float: right;
-
 }
 
 .paintings {
-  -webkit-transform: scale(0.7); /* Saf3.1+, Chrome */
-     -moz-transform: scale(0.7); /* FF3.5+ */
-      -ms-transform: scale(0.7); /* IE9 */
-       -o-transform: scale(0.7); /* Opera 10.5+ */
-          transform: scale(0.7);
-          transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.7);
+    /* FF3.5+ */
+    -ms-transform: scale(0.7);
+    /* IE9 */
+    -o-transform: scale(0.7);
+    /* Opera 10.5+ */
+    transform: scale(0.7);
+    transform: scale(0.7);
 }
 
 .imgCL {
     float: right;
+    max-width: 49vw;
 }
 
 .imgCR {
     float: left;
+    max-width: 49vw;
 }
 
+.sectionTitle {
+    top: -7%;
+}
 
+/* responsiveness */
 
-@media only screen and (min-width: 768px) {
-    .cd-section h1 {
-        font-size: 30px;
-        font-size: 1.875rem;
+/* extra large */
+
+@media screen and (min-width: 1200px) {}
+
+/* large */
+
+@media screen and (max-width: 1200px) {
+
+    #Grace {
+        left: 24vw;
     }
-}
+
+    #Hartigan {
+        left: 45vw;
+    }
+
+    #Visual {
+        left: 64.5vw;
+    }
+
+    #Library {
+        left: 84vw;
+    }
+
+    .paintings {
+        -webkit-transform: scale(0.5);
+
+        -moz-transform: scale(0.5);
+
+        -ms-transform: scale(0.5);
+
+        -o-transform: scale(0.5);
+
+        transform: scale(0.5);
+
+    }
+
+    /* medium */
+
+    @media screen and (max-width: 992px) {
+
+        #slogan {
+            left: 15vw;
+        }
+
+        #G {
+
+            left: 15vw;
+        }
+
+
+        #H {
+
+            left: 15vw;
+        }
+
+
+        #V {
+
+            left: 55vw;
+        }
+
+        #L {
+
+            left: 55vw;
+        }
+
+        #Grace {
+            left: 26vw;
+        }
+
+        #Hartigan {
+            left: 27vw;
+        }
+
+        #Visual {
+            left: 67vw;
+        }
+
+        #Library {
+            left: 66vw;
+        }
+
+        .sectionTitle {
+            left: 15vw;
+        }
+
+        #bridePic3 {
+            position: relative;
+            left: -50px;
+        }
+
+        #culPic3 {
+            position: relative;
+            left: -50px;
+            top: 275px;
+        }
+
+        #absPic3 {
+            position: relative;
+            left: -50px;
+        }
+
+        .paintings {
+            -webkit-transform: scale(0.5);
+            -moz-transform: scale(0.5);
+            -ms-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            transform: scale(0.5);
+            transform: scale(0.5);
+        }
+    }
+
+    /* small */
+
+    @media screen and (max-width: 768px) {
+        #genderPic3 {
+            position: relative;
+            left: -100px;
+            top: 200px;
+        }
+
+        #bridePic2 {
+            position: relative;
+            left: -150px;
+        }
+
+        #bridePic3 {
+            position: relative;
+            top: -50px;
+        }
+
+        #orangePic3 {
+            position: relative;
+            left: 100px;
+        }
+
+        #orangePic4 {
+            position: relative;
+            top: 100px;
+        }
+
+        #culPic1 {
+            position: relative;
+            top: -50px;
+        }
+
+        #culPic3 {
+            position: relative;
+            left: -100px;
+            top: 275px;
+        }
+
+        #absPic3 {
+            position: relative;
+            left: -250px;
+            top: 250px;
+        }
+
+    }
+
+    /* extra small */
+
+    @media only screen and (max-width: 700px) {
+
+        .paintings {
+            -webkit-transform: scale(0.4);
+            -moz-transform: scale(0.4);
+            -ms-transform: scale(0.4);
+            -o-transform: scale(0.4);
+            transform: scale(0.4);
+        }
+
+        #culPic1 {
+            position: relative;
+            left: -100px;
+        }
+
+        #culPic3 {
+            position: relative;
+            left: -200px;
+        }
+
+    }

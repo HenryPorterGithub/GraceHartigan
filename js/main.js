@@ -1,7 +1,7 @@
 function titleLoaders() {
 
-    var numCurrentY = scrollY;
-    var numScreenY = 0.8*window.innerHeight;
+    var numCurrentY = 1.25 * scrollY;
+    var numScreenY = window.innerHeight;
     console.log(numCurrentY)
     console.log(numScreenY);
     
