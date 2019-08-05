@@ -1,76 +1,128 @@
 <!doctype html>
 <html lang="en" class="no-js">
 
+<style>
+    .row {
+        display: -ms-flexbox;
+        /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap;
+        /* IE10 */
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        -ms-flex: 25%;
+        /* IE10 */
+        flex: 15%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>GHVL</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <title>The Plane Story</title>
+    Powered by
+    StackPath
 
 </head>
 
 <body onscroll="titleLoaders()">
 
-    <!--
-    <nav id="cd-vertical-nav">
-        <ul>
-            <li>
-                <a href="#section1" data-number="1">
-                    <span class="cd-label">Intro</span>
-                    <span class="cd-dot"></span>
+    <!-- nav -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
 
-                </a>
-            </li>
-            <li>
-                <a href="#section2" data-number="2">
-                    <span class="cd-label">Gender</span>
-                    <span class="cd-dot"></span>
+            <!-- button that appears on collapse of navbar -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-                </a>
-            </li>
-            <li>
-                <a href="#section3" data-number="3">
-                    <span class="cd-label">Brides</span>
-                    <span class="cd-dot"></span>
+            <!-- brand -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">GHVL</a>
+            </div>
 
-                </a>
-            </li>
-            <li>
-                <a href="#section4" data-number="4">
-                    <span class="cd-label">Oranges</span>
-                    <span class="cd-dot"></span>
+            <!-- collapsing section of navbar -->
+            <div class="collapse navbar-collapse" id="myNavbar">
 
-                </a>
-            </li>
-            <li>
-                <a href="#section5" data-number="5">
-                    <span class="cd-label">Culture</span>
-                    <span class="cd-dot"></span>
+                <!-- left side -->
+                <ul class="nav navbar-nav">
+                    <li><a href="#secAbout">About</a></li>
+                    <li><a href="#secPC">Public Collections</a></li>
+                    <li><a href="#secCE">Current Exhibitions</a></li>
+                    <li><a href="#secArt">Art</a></li>
+                    <li><a href="#secBio">Biography</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Auctions</a></li>
+                </ul>
 
-                </a>
-            </li>
-            <li>
-                <a href="#section6" data-number="6">
-                    <span class="cd-label">Abstract</span>
-                    <span class="cd-dot"></span>
+                <!-- right side -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href=""><i class="fab fa-facebook-square"></i></a> </li>
+                    <li class="nav-item"><a class="nav-link" href=""><i class="fab fa-instagram"></i></a> </li>
+                    <li class="nav-item"><a class="nav-link" href=""><i class="fab fa-twitter-square"></i></a> </li>
+                </ul>
 
-                </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </nav>
-    -->
 
-
-
-    <section id="section1" class="cd-section">
+    <section id="section1">
 
         <h1 id="G" class="intro">G</h1>
         <h1 id="Grace" class="intro">race</h1>
-        <p id="slogan">Peacock Studios <br> Design & Innovation</p>
+        <h1 id="slogan">Peacock Studios <br> Design & Innovation</h1>
         <h1 id="H" class="intro">H</h1>
         <h1 id="Hartigan" class="intro">artigan</h1>
         <h1 id="V" class="intro">V</h1>
@@ -78,103 +130,230 @@
         <h1 id="L" class="intro">L</h1>
         <h1 id="Library" class="intro">ibrary</h1>
 
-        <p id="section2Title" class="sectionTitle">Gender</p>
-        <p id="section3Title" class="sectionTitle">Brides</p>
-        <p id="section4Title" class="sectionTitle">Oranges</p>
-        <p id="section5Title" class="sectionTitle">Culture</p>
-        <p id="section6Title" class="sectionTitle">Abstract</p>
+    </section>
+
+    <!-- about -->
+    <section id="secAbout">
+
+        <h1 class="sectionTitle"> About </h1>
+        <hr class="hrTitle">
+
+        <div class="divCentralText">
+            <h2>The Grace Hartigan Visual Library is the internet's principal hub for all news, information and images relating to the deceased abstract expressionist Grace Hartigan (1957-2008).</h2>
+            <br>
+            <h2>Please take the time to familiarize yourself with Hartigan's life, times and works using the links in the navbar.</h2>
+            <br>
+            <h2>This website was sponsored by Michael Klein and created by Peacock Studios</h2>
+        </div>
 
     </section>
 
-    <!-- gender -->
-    <section id="section2" class="cd-section">
-        <div class="left">
-            <div class="imgCL">
-                <img class="paintings" id="genderPic1" src="img/Gender/gender1.jpg" />
+    <!-- public collections -->
+    <section id="secPC">
+
+        <h1 class="sectionTitle"> Public Collections </h1>
+        <hr class="hrTitle">
+
+        <div class="container">
+            <img src="img/MoMA.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://www.moma.org/artists/2520" target="_blank" class="middle">
+                <div class="text">Museum of Modern Art, <br> Manhattan</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <img src="img/Guggenheim.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://www.guggenheim.org/class" target="_blank" class="middle">
+                <div class="text">The Guggenheim, <br> Manhattan</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <img src="img/Smithsonian.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://americanart.si.edu/artist/grace-hartigan-2096" target="_blank" class="middle">
+                <div class="text">The Smithsonian, <br> Washington, D.C.</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <img src="img/Figge.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://figgeartmuseum.org/" target="_blank" class="middle">
+                <div class="text">Figge Art Museum, <br> Davenport, Iowa</div>
+            </a>
+        </div>
+
+        <div class="container">
+            <img src="img/Menello.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://en.wikipedia.org/wiki/Mennello_Museum_of_American_Art" target="_blank" class="middle">
+                <div class="text">Menello Museum of American Art, <br> Orlando, Florida</div>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- current exhibitions -->
+    <section id="secCE">
+
+        <h1 class="sectionTitle"> Current Exhibitions </h1>
+        <hr class="hrTitle">
+
+
+        <div class="container">
+            <img src="img/grimaldis.jpg" alt="Avatar" class="image" style="width:100%">
+            <a href="https://www.mutualart.com/Exhibition/Summer-19/2845244CED6A335F" target="_blank" class="middle">
+                <div class="text">Summer '19 Grimaldis Gallery, <br> Baltimore</div>
+            </a>
+        </div>
+
+
+    </section>
+
+
+    <!-- past exhibitions -->
+    <section id="secPE">
+
+        <h1 class="sectionTitle"> Past Exhibitions </h1>
+        <hr class="hrTitle">
+
+        <!-- articles -->
+        <div class="rowBS">
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/DeLand.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/Grace-Hartigan--Retrospective/0F8FA03B82B7C15B" target="_blank" class="middle">
+                        <div class="textExhibitions">Grace Hartigan: Retrospective, <br> DeLand Gallery, Florida</div>
+                    </a>
+                </div>
             </div>
-            <div class="imgCL">
-                <img class="paintings" id="genderPic2" src="img/Gender/gender2.png" />
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/michigan.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/Exercising-the-Eye--The-Gertrude-Kasle-C/295443489D6D1A07" target="_blank" class="middle">
+                        <div class="textExhibitions">Exercising The Eye, <br> University of Michigan Museum of Art, Michigan</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/michigan2.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/Mining-the-Collection/187FF345691EAB0B" target="_blank" class="middle">
+                        <div class="textExhibitions">Mining The Collection, <br> Michigan State University</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/oklahoma.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/The-New-Art--A-Milestone-Collection-Fift/AE774810CC4DBF67" target="_blank" class="middle">
+                        <div class="textExhibitions">The New Art, <br> Oklahoma City Museum of Art, Oklahoma</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/richard.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/Mid-Century-Abstraction/6EDA44C563614241" target="_blank" class="middle">
+                        <div class="textExhibitions">Mid-Century Abstraction, <br> Richard Gray Gallery, New York</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/setareh.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/A-Gesture-of-Conviction--Women-of-Abstra/0B59E60FA6A4A9B1" target="_blank" class="middle">
+                        <div class="textExhibitions">A Gesture of Conviction, <br> Setareh Gallery, </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/grimaldis.jpg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/Summer--18/012258A55710786C" target="_blank" class="middle">
+                        <div class="textExhibitions">Summer '18, <br> Grimaldis Gallery, Baltimore</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 column">
+                <div class="containerExhibitions">
+                    <img src="img/freedman.Jpeg" alt="Avatar" class="imageExhibitions" style="width:100%">
+                    <a href="https://www.mutualart.com/Exhibition/COLORS/4ADBFA0A037C96C0" target="_blank" class="middle">
+                        <div class="textExhibitions">Colors, <br> Freedman Art Gallery, New York</div>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="right">
-            <div class="imgCR">
-                <img class="paintings" id="genderPic3" src="img/Gender/gender3.png" />
-            </div>
-        </div>
     </section>
 
     <!-- Brides -->
-    <section id="section3" class="cd-section">
-        <div class="left">
-            <div class="imgCL">
-                <img class="paintings" id="bridePic1" src="img/Brides/bride1ghvl.jpg" />
-            </div>
-            <div class="imgCL">
-                <img class="paintings" id="bridePic2" src="img/Brides/bride2ghvl.jpg" />
-            </div>
-        </div>
+    <section id="secBio">
 
-        <div class="right">
-            <div class="imgCR">
-                <img class="paintings" id="bridePic3" src="img/Brides/bridepic3.jpg" />
-            </div>
-        </div>
-    </section>
+        <h1 class="sectionTitle"> Biography </h1>
+        <hr class="hrTitle">
 
-    <!-- Oranges -->
-    <section id="section4" class="cd-section">
-
-        <div class="left">
-            <div class="imgCL">
-                <img class="paintings" id="orangePic2" src="img/Orange/neworange.jpg" />
-
-            </div>
-            <div class="imgCL">
-                <img class="paintings" id="orangePic1" src="img/Orange/orange1ghvl.png" />
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="imgCR">
-                <img class="paintings" id="orangePic3" src="img/Orange/orange3ghvl.png" />
-            </div>
-            <div class="imgCR">
-                <img class="paintings" id="orangePic4" src="img/Orange/neworange2.jpg" />
-            </div>
+        <div class="divCentralText">
+            <h2>Grace Hartigan, (born March 28, 1922, Newark, N.J., U.S.—died Nov. 15, 2008, Baltimore, MD.), an American painter best known for her Abstract Expressionist works of the 1950s, which gradually incorporated recognizable imagery. Her later paintings were sometimes identified with Pop art despite her distaste for that style.</h2>
+            <br>
+            <h2>Hartigan was a latecomer to art, coaxed into taking night school lessons by her first husband after they wound up in Los Angeles—she was pregnant; they were broke—after a cross-country journey intended to take them to Alaska. Back in New Jersey while her husband (whom she divorced in 1947) served in the Army, she took lessons from a local painter and moved with him to New York. She became intrigued by Abstract Expressionism after seeing Jackson Pollock’s drip paintings at the Betty Parsons Gallery. (Her 1949 wedding to artist Harry Jackson, annulled in 1953, took place at the home of Pollock and his wife, painter Lee Krasner.) Willem de Kooning became her informal mentor, and she soon became a fixture at the downtown artists’ two hangouts, the Club and the Cedar Tavern.</h2>
+            <br>
+            <h2>Hartigan’s career was launched in 1950 when one of her paintings was selected by Clement Greenberg and Meyer Schapiro for the "New Talent" show at the Kootz Gallery. The following year, she had her first solo show, at the Tibor de Nagy Gallery. Feeling that she needed to work in a more personal style, less indebted to Abstract Expressionism, she became increasingly influenced by Velázquez, Goya, and other Old Master painters. She also drew inspiration from the works of Paul Cézanne and Henri Matisse. Although many of her fellow artists criticized this new direction, her 1952 painting The Persian Jacket was purchased for the permanent collection of the Museum of Modern Art. A close friend of the poet Frank O’Hara, she collaborated with him on Oranges, a suite of figurative paintings that incorporate passages from his 1949 poem series.</h2>
+            <br>
+            <h2>Other major museum purchases followed: the Museum of Modern Art bought the Matisse-influenced River Bathers (1953); the Whitney Museum bought Grand Street Brides (1954), based on the shop windows of bridal gowns in the Lower East Side, where Hartigan lived in an unheated loft. In 1956, Hartigan began what became a series of "City Life" paintings, which combine interlocking planes of color with imagery that reflected the street scenes of her neighborhood. That year, she was the only woman represented in the groundbreaking exhibition, "Twelve Americans," at the Museum of Modern Art. In 1958, she was the youngest artist and only woman in the museum’s exhibition, "The New American Painting," which traveled to eight cities in Europe.</h2>
+            <br>
+            <h2>After the annulment of a brief third marriage, Hartigan wed her fourth husband, an epidemiologist at Johns Hopkins University, which entailed a move to Baltimore in 1961. At first, bitterly regretting her departure from the New York art world, she tried to replicate her old studio environment by working in an abandoned factory building. Billboard (1957) marked the introduction of pop culture imagery into her paintings. In the early 1960s, her work reflected her fascination with the death of Marilyn Monroe and the launch of the Barbie doll. During the following decades, Hartigan looked to paper doll books of historical figures and movie actresses in her constant search for subject matter to paint.</h2>
+            <br>
+            <h2>In 1964, she began teaching part-time at the newly founded Hoffberger School of Painting, a graduate program at the Maryland Institute College of Art. Known for her merciless student critiques, Hartigan—who became director of the school the following year—stressed expressivity above all. Although plagued by ill health (she was a recovering alcoholic and had osteoarthritis), she refused to retire.</h2>
+            <br>
+            <h2>In the 1980s, her early work was included in two major museum shows, "Action/Precision: The New Direction in New York, 1955–60" and "The Figurative Fifties: New York Figurative Expressionism." Her last major group exhibition was "Hand-Painted Pop: American Art in Transition, 1955–62," shown in leading museums in Los Angeles, Chicago, and New York.</h2>
+            <br>
+            <h2>The Journals of Grace Hartigan, 1951–1955, (2009) constitute a remarkable document, revealing Hartigan’s personal and financial concerns, and her day-to-day struggles with her painting.</h2>
         </div>
 
     </section>
 
-    <!-- Culture -->
-    <section id="section5" class="cd-section">
+    <section id="secArt">
 
-        <div class="left">
-            <div class="imgCL">
-                <img class="paintings" id="culPic1" src="img/PopularCulture/cul1.jpg" />
+        <h1 class="sectionTitle"> Art </h1>
+        <hr class="hrTitle">
+
+        <!-- Photo Grid -->
+        <div id="divFlexBox">
+            <div class="row">
+                <div class="column">
+                    <img src="img/Abstract/abs1.jpg" style="width:100%">
+                    <img src="img/Abstract/abs2.jpg" style="width:100%">
+                    <img src="img/Abstract/abs3.jpg" style="width:100%">
+                    <img src="img/Abstract/abs4.jpg" style="width:100%">
+                    <img src="img/Abstract/abs5.jpg" style="width:100%">
+                    <img src="img/Abstract/abs6.png" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="img/Brides/bride1ghvl.jpg" style="width:100%">
+                    <img src="img/Brides/bride2ghvl.jpg" style="width:100%">
+                    <img src="img/Brides/bride3ghvl.jpg" style="width:100%">
+                    <img src="img/Brides/bridepic3.jpg" style="width:100%">
+                    <img src="img/Gender/gender1.jpg" style="width:100%">
+                    <img src="img/Gender/gender2.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="img/Gender/gender3.png" style="width:100%">
+                    <img src="img/Gender/gender4.jpg" style="width:100%">
+                    <img src="img/Gender/gender5.jpg" style="width:100%">
+                    <img src="img/Gender/gender6.jpg" style="width:100%">
+                    <img src="img/Orange/neworange.jpg" style="width:100%">
+                    <img src="img/Orange/neworange2.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="img/Orange/orange1ghvl.png" style="width:100%">
+                    <img src="img/Orange/orange2ghvl.png" style="width:100%">
+                    <img src="img/Orange/orange3ghvl.png" style="width:100%">
+                    <img src="img/PopularCulture/cul1.jpg" style="width:100%">
+                    <img src="img/PopularCulture/cul2.jpg" style="width:100%">
+                    <img src="img/PopularCulture/cul3.jpg" style="width:100%">
+                </div>
             </div>
         </div>
-        <div class="right">
-            <div class="imgCR">
-                <img class="paintings" id="culPic3" src="img/PopularCulture/cul2.jpg" />
-            </div>
-        </div>
 
-    </section>
-
-    <!-- Abstract -->
-
-    <section id="section6" class="cd-section">
-        <div class="left">
-            <div class="imgCL">
-                <img class="paintings" id="absPic1" src="img/Abstract/abs2.jpg" />
-            </div>
-        </div>
-        <div class="right">
-            <div class="imgCR">
-                <img class="paintings" id="absPic3" src="img/Abstract/abs4.jpg" />
-            </div>
-        </div>
     </section>
 
     <script src="js/jquery-2.1.1.js"></script>
