@@ -1,97 +1,47 @@
 body {
-    background-color: #3e3947;
     font-family: 'Old Standard TT', serif;
-
 }
 
-#home {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+/* intro */
+
+nav {
+
+    font-size: 2vh;
 }
 
-h1,
-p,
-span {
-    color: white;
-}
-
-.letter {
-    font-size: 200px;
-}
-
-.word {
+#G,
+#H,
+#V,
+#L {
     position: absolute;
-    font-size: 50px;
-    text-transform: uppercase;
+    top: 40vh;
+    font-size: 20vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#Grace,
+#Hartigan,
+#Visual,
+#Library {
+    position: absolute;
+    font-size: 5vh;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: appear;
+    opacity: 0;
 }
 
 /* animation assignment */
 
-#race,
-#artigan,
-#isual,
-#ibrary {
-    animation: appear 2s forwards;
-    opacity: 0;
+#G,
+#V {
+    animation-name: moveUp;
 }
 
-.up1 {
-    animation: moveUp 1.5s forwards;
-}
-
-.down1 {
-    animation: moveDown 1.5s forwards;
-}
-
-.up2 {
-    animation: moveUp 1.5s forwards 2s;
-}
-
-.down2 {
-    animation: moveDown 1.5s forwards 2s;
-}
-
-/* initial position of words */
-
-#grace {
-    left: 10vw;
-}
-
-#race {
-    position: relative;
-    left: -25px;
-    animation-delay: 2.5s;
-}
-
-#hartigan {
-    left: 30vw;
-}
-
-#artigan {
-    position: relative;
-    left: -5px;
-    animation-delay: 3s;
-}
-
-#visual {
-    left: 50vw;
-}
-
-#isual {
-    position: relative;
-    left: -55px;
-    animation-delay: 3.5s;
-}
-
-#library {
-    left: 70vw;
-}
-
-#ibrary {
-    position: relative;
-    left: -10px;
-    animation-delay: 4s;
+#H,
+#L {
+    animation-name: moveDown;
 }
 
 /* animation definition */
@@ -116,46 +66,6 @@ span {
     }
 }
 
-@keyframes moveUpMobileShort {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(-40%);
-    }
-}
-
-@keyframes moveDownMobileShort {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(40%);
-    }
-}
-
-@keyframes moveUpMobileFar {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(-120%);
-    }
-}
-
-@keyframes moveDownMobileFar {
-    0% {
-        transform: translateY(0%);
-    }
-
-    100% {
-        transform: translateY(120%);
-    }
-}
-
 @keyframes appear {
     0% {
         opacity: 0;
@@ -166,70 +76,295 @@ span {
     }
 }
 
-@media screen and (max-width: 1300px) {
-    #grace {
-        left: 10vw;
-    }
+/* positioning */
 
-    #hartigan {
-        left: 10vw;
-    }
-
-    #visual {
-        left: 47vw;
-    }
-
-    #library {
-        left: 50vw;
-    }
-
-    .letter {
-        font-size: 150px;
-    }
-
-    .word {
-        font-size: 30px;
-    }
-
-    #race {
-        left: -20px;
-    }
-
-    #artigan {
-        left: -5px;
-    }
-
-    #isual {
-        left: -45px;
-    }
-
-    #ibrary {
-        left: -10px;
-    }
+#G {
+    animation-delay: 1s;
+    left: 15vw;
 }
 
-@media screen and (max-width: 768px) {
-    .up1 {
-        animation: moveUpMobileFar 1.5s forwards;
-    }
-
-    .down1 {
-        animation: moveUpMobileShort 1.5s forwards;
-    }
-
-    .up2 {
-        animation: moveDownMobileShort 1.5s forwards;
-    }
-
-    .down2 {
-        animation: moveDownMobileFar 1.5s forwards;
-    }
-
-    #visual {
-        left: 10vw;
-    }
-
-    #library {
-        left: 10vw;
-    }
+#Grace {
+    animation-delay: 2.5s;
+    left: 21vw;
+    top: 28vh;
 }
+
+#H {
+    animation-delay: 1s;
+    left: 35vw;
+}
+
+#Hartigan {
+    animation-delay: 3s;
+    left: 41.5vw;
+    top: 73vh;
+}
+
+#slogan {
+    top: 80vh;
+    left: 35.5vw;
+    font-size: 2vh;
+    position: absolute;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: appear;
+    opacity: 0;
+}
+
+#V {
+    animation-delay: 2s;
+    left: 55vw;
+}
+
+#Visual {
+    animation-delay: 3.5s;
+    left: 61.5vw;
+    top: 21vh;
+}
+
+#L {
+    animation-delay: 2s;
+    left: 75vw;
+}
+
+#Library {
+    animation-delay: 4s;
+    left: 81vw;
+    top: 74vh;
+}
+
+.intro {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#section1 {
+    min-height: 100vh;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 15vh;
+    margin-top: 100px;
+}
+
+.hrTitle {
+    width: 20vw;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 100px;
+}
+
+.divCentralText {
+    width: 40vw;
+    margin: auto;
+}
+
+#divFlexBox {
+    width: 80%;
+    margin: auto;
+}
+
+/* public collections */
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 50px;
+    padding: 16px 32px;
+}
+
+/* exhibitions */
+
+.rowBS {
+    width: 80%;
+    margin: auto;
+}
+
+.containerExhibitions {
+    display: inline-block;
+    position: relative;
+    width: 100%
+    margin: auto;
+    
+}
+
+.imageExhibitions {
+    width: 50px;
+    height: 250px;
+}
+
+
+.containerExhibitions:hover .image {
+    opacity: 0.3;
+}
+
+.containerExhibitions:hover .middle {
+    opacity: 1;
+}
+
+.textExhibitions {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+}
+
+.row {
+    margin: auto;
+}
+
+a {
+    font-size: 15px;
+}
+/* responsiveness */
+
+/* extra large */
+
+@media screen and (min-width: 1200px) {}
+
+/* xl */
+
+@media screen and (max-width: 1700px) {
+
+    #Grace {
+        left: 22vw;
+    }
+
+    #Hartigan {
+        left: 43vw;
+    }
+
+    #Visual {
+        left: 62.5vw;
+    }
+
+    #Library {
+        left: 82vw;
+    }
+    
+    @media screen and (max-width: 1300px) {
+
+    #Grace {
+        left: 23vw;
+    }
+
+    #Hartigan {
+        left: 44vw;
+    }
+
+    #Visual {
+        left: 63.5vw;
+    }
+
+    #Library {
+        left: 83vw;
+    }
+/* large */
+
+@media screen and (max-width: 1200px) {
+
+    #Grace {
+        left: 24vw;
+    }
+
+    #Hartigan {
+        left: 45vw;
+    }
+
+    #Visual {
+        left: 64.5vw;
+    }
+
+    #Library {
+        left: 84vw;
+    }
+
+    /* medium */
+
+    @media screen and (max-width: 992px) {
+
+        #slogan {
+            left: 15vw;
+        }
+
+        #G {
+
+            left: 15vw;
+        }
+
+
+        #H {
+
+            left: 15vw;
+        }
+
+
+        #V {
+
+            left: 55vw;
+        }
+
+        #L {
+
+            left: 55vw;
+        }
+
+        #Grace {
+            left: 26vw;
+        }
+
+        #Hartigan {
+            left: 27vw;
+        }
+
+        #Visual {
+            left: 67vw;
+        }
+
+        #Library {
+            left: 66vw;
+        }
+
+    }
+
+    /* small */
+
+    @media screen and (max-width: 768px) {}
+
+    /* extra small */
+
+    @media only screen and (max-width: 700px) {}
